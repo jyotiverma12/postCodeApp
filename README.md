@@ -34,7 +34,7 @@ There is one to one mapping between a post code and Suburb.
 
 ``` cd postCodeApp ```
 
-* If you are running application on EC2 instance, excute following command, otherwise skip this step and move to comiling step
+* If you are running application on EC2 Linux instance (I tested with Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0b76c3b150c6b1423), excute following command, otherwise skip this step and move to compiling step
 
 ``` chmod +x ./install_maven_and_java.sh ```
 
@@ -68,7 +68,7 @@ This will install Maven and Java 1.8 on your EC2 instance.
 ```
 
 * Run the following endpoint to get **Suburb by post code** 
-* endpoint URL: http://localhost:8080/api/getbypostcode/3037
+* Localhost endpoint URL: http://localhost:8080/api/getbypostcode/3037 (or relevant EC2 instance URL)
 	* http method=GET
 	* add following http header:
  	* key=Content-Type value=application/json
@@ -81,7 +81,7 @@ click send and you should get the following results
 }
 ```
 * Run the following endpoint to get **Postcode by suburb** 
-* endpoint URL: http://localhost:8080/api/getbysuburb/Sydenham
+* endpoint URL: http://localhost:8080/api/getbysuburb/Sydenham (or relevant EC2 instance URL)
 	* http method=GET
 	* add following http header:
  	* key=Content-Type value=application/json
