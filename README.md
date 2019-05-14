@@ -33,6 +33,15 @@ There is one to one mapping between a post code and Suburb.
 * Execute command:
 
 ``` cd postCodeApp ```
+
+* If you are running application on EC2 instance, excute following command, otherwise skip this step and move to comiling step
+
+``` chmod +x ./install_maven_and_java.sh ```
+
+``` ./install_maven_and_java.sh ```
+
+This will install Maven and Java 1.8 on your EC2 instance. 
+
 * Compile code using following command
 
 ``` mvn clean install ```
